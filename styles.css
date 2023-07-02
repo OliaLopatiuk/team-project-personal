@@ -1,0 +1,450 @@
+.link {
+    text-decoration: none;
+  }
+  
+ ul {
+    list-style: none;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    display: block;
+  }
+
+  body {
+    font-family: DM Sans, sans-serif;
+  }
+
+  :root {
+    --text-color: #141414;
+    --active: #A1C487;
+    --accent: #FC8A11;
+  }
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    background: rgba(46, 47, 66, 0.4);
+    opacity: 1;
+    visibility: visible;
+    /* transition: opacity var(--transition), visibility var(--transition);
+}*/
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transition: transform var(--transition); */
+
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    overflow-y: scroll;
+  
+    background-color: #FFF;
+    box-shadow: 0px 0px 8.78px 0px rgba(0, 0, 0, 0.01), 0px 0px 18.17px 0px rgba(0, 0, 0, 0.02), 0px 0px 36.24px 0px rgba(0, 0, 0, 0.03), 0px 0px 71.03px 0px rgba(0, 0, 0, 0.03), 0px 0px 130.6px 0px rgba(0, 0, 0, 0.04), 0px 0px 223px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    }
+
+    @media screen and (min-width: 335px) {
+      .modal {
+      width: 335px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .modal {
+      width: 704px;
+      height: 100%;
+      padding: 40px;
+
+      background-image: url('./img-girl-tablet.png');
+      background-repeat: no-repeat;
+      background-size: 291px 413px;
+     background-position: right 0 bottom 0;
+      }
+
+      @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .modal {
+    background-image: url('./img-girl-tablet@2x.png');
+  }
+    }
+  }
+
+    @media screen and (min-width: 1280px) {
+      .modal {
+      width: 891px;
+
+      background-image: url('./img-girl-desktop.png');
+      background-repeat: no-repeat;
+      background-size: 444px 413px;
+     background-position: right 7px bottom 0;
+      }
+
+      @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .modal {
+    background-image: url('./img-girl-desktop@2x.png');
+  }
+    }
+    }
+
+    .close-modal-button {
+      position: absolute;
+      top: 22px;
+      right: 20px;
+    
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      margin: 0;
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+    
+      cursor: pointer;
+    }
+
+    @media screen and (min-width: 768px) {
+      .close-modal-button {
+        top: 20px;
+        right: 20px;
+      }
+    }
+
+    .close-modal-icon {
+      stroke: #000;
+      transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .close-modal-button:hover .close-modal-icon,
+.close-modal-button:focus .close-modal-icon {
+  stroke: var(--active);
+}
+
+
+.modal-title {
+margin-bottom: 40px;
+
+color: var(--text-color);
+text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10);
+font-size: 28px;
+font-weight: 500;
+line-height: 1;
+letter-spacing: -1.12px;
+text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-title {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -1.6px;
+  }
+}
+
+.card-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.product-item {
+  position: relative;
+
+    padding: 20px;
+    height: 119px;
+    max-width: 295px;
+
+    background-repeat: no-repeat;
+    background-size: 94px 78px;
+    background-position: right 30px bottom 8px;
+
+    background-color: #FAF3E7;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .product-item {
+    padding: 40px 20px;  
+    height: 250px;
+    width: calc((100% - 24px) / 3);
+
+    background-size: 172px 142px;
+    background-position: right 14px bottom 14px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .product-item {
+    height: 308px;
+    width: calc((100% - 40px) / 3);
+
+    background-size: 243px 200px;
+    background-position: right 7px bottom 14px;
+  }
+}
+
+.cabbage-item {
+  background-image: url('./cabbage.png');
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .cabbage-item {
+    background-image: url('./cabbage@2x.png');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cabbage-item {
+    background-image: url('./cabbage-tablet.png');
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .cabbage-item {
+    background-image: url('./cabbage-tablet@2x.png');
+  }
+}
+}
+
+/* зробити для інших овочів те саме */
+
+@media screen and (max-width: 767px) {
+.product-item:not(:last-child) {
+    margin-bottom: 12px;
+}
+}
+
+.product-list {
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .product-list {
+    display: flex;
+    gap: 12px;
+}
+}
+
+.card-title {
+  color: var(--text-color);
+font-size: 18px;
+font-weight: 700;
+line-height: 1.33;
+letter-spacing: -0.72px;
+margin-bottom: 2px;
+}
+
+@media screen and (min-width: 1280px) {
+  .card-title {
+font-size: 24px;
+line-height: 1.17;
+letter-spacing: -0.96px;
+  }
+}
+
+.card-text {
+  color: var(--text-color);
+font-size: 14px;
+font-weight: 400;
+line-height: 1.29;
+letter-spacing: -0.28px;
+}
+
+.checkbox-custom-field {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 4px;
+border: 1.5px solid var(--active);
+cursor: pointer;
+
+background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .checkbox-custom-field {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.checkbox-icon {
+  width: 6px;
+    height: 6px;
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+@media screen and (min-width: 768px) {
+  .checkbox-icon {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.checkbox:checked + .checkbox-custom-field > .checkbox-icon {
+  fill: var(--active);
+}
+
+.checkbox:focus-visible + .checkbox-custom-field {
+  outline: 2px solid var(--accent);
+}
+
+.input-field {
+display: block;
+padding-top: 14px;
+padding-bottom: 14px;
+padding-left: 24px;
+margin-bottom: 14px;
+
+width: 100%;
+height: 46px;
+
+color: rgba(20, 20, 20, 0.80);
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+
+border-radius: 100px;
+border: 1px solid rgba(20, 20, 20, 0.30);
+outline: transparent;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .input-field {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    width: 360px;
+    height: 48px;
+  }
+}
+
+.input-field:focus {
+  border-color: var(--accent);
+}
+
+.input-field:not(:last-child) {
+
+}
+
+.input-field::placeholder, .comment::placeholder {
+  color: rgba(20, 20, 20, 0.50);
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+}
+
+.comment {
+  display: block;
+  padding: 14px 24px;
+
+    width: 100%;
+    height: 132px;
+  
+    resize: none;
+    border: 1px solid rgba(20, 20, 20, 0.30);
+    border-radius: 20px;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    color: rgba(20, 20, 20, 0.80);
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+
+    outline: transparent;
+  }
+
+  @media screen and (min-width: 768px) {
+    .comment {
+      padding: 15px 24px;
+  
+      width: 360px;
+      height: 145px;
+    }
+  }
+
+  .comment:focus {
+    border-color: var(--accent);
+  }
+
+  .form {
+    margin-bottom: 20px;
+  }
+
+  .submit-button {
+    display: block;
+    padding: 12px 24px;
+
+    color: #FFF;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.56px;
+    text-transform: capitalize;
+
+    border: none;
+    border-radius: 100px;
+    background-color: var(--accent);
+    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .submit-button:hover, .submit-button:focus {
+    background-color: var(--active);
+  }
