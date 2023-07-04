@@ -106,6 +106,27 @@
             </form>
             <button class="submit-button" type="submit">Submit</button>
         
+            <picture
+                  >
+                    <source
+                    srcset="
+                    ./img-girl-desktop@2x.png 2x,
+                    ./img-girl-desktop.png 1x
+                    " 
+                    media="(min-width: 1280px)"/>
+                    <source
+                    srcset="
+                    ./img-girl-tablet@2x.png 2x,
+                    ./img-girl-tablet.png 1x
+                    " 
+                    media="(min-width: 768px)"/>
+
+                  <img
+                    src="./img-girl-desktop.png"
+                    alt="a girl with a vegetable"
+                    class="modal-picture"
+                /></picture>
+
         </div>
     </div>
 </body>

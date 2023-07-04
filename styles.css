@@ -75,6 +75,7 @@
     /* transition: transform var(--transition); */
 
     height: 100%;
+    max-height: 903px;
     width: 100%;
     padding: 20px;
     overflow-y: scroll;
@@ -93,41 +94,18 @@
     @media screen and (min-width: 768px) {
       .modal {
       width: 704px;
-      height: 100%;
       padding: 40px;
-
-      background-image: url('./img-girl-tablet.png');
-      background-repeat: no-repeat;
-      background-size: 291px 413px;
-     background-position: right 0 bottom 0;
+      height: 100%;
+    max-height: 853px;
       }
-
-      @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    .modal {
-    background-image: url('./img-girl-tablet@2x.png');
-  }
-    }
   }
 
     @media screen and (min-width: 1280px) {
       .modal {
       width: 891px;
-
-      background-image: url('./img-girl-desktop.png');
-      background-repeat: no-repeat;
-      background-size: 444px 413px;
-     background-position: right 7px bottom 0;
+      height: 100%;
+    max-height: 911px;
       }
-
-      @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    .modal {
-    background-image: url('./img-girl-desktop@2x.png');
-  }
-    }
     }
 
     .close-modal-button {
@@ -448,3 +426,24 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .submit-button:hover, .submit-button:focus {
     background-color: var(--active);
   }
+
+  .modal-picture {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .modal-picture {
+      display: block;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+  .modal-picture {
+    position: absolute;
+    bottom: 0px;
+    right: 7px;
+  }
+}
